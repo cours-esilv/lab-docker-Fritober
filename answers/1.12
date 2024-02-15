@@ -1,0 +1,1 @@
+docker run -p 8080:8080 --name frontcontainer -e WS_BACK_URL=http://localhost:8080 frontimage

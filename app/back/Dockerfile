@@ -8,8 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
-ENV CURRENT_ENVIRONMENT production
-
-RUN mkdir ./logs
-
-CMD ["python3", "-m, "flask", "run", "--host=0.0.0.0"]
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]

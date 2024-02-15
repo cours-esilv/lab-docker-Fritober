@@ -1,0 +1,19 @@
+version: '3'
+services:
+  my-service:
+    image: phrito/johan_liu_td3:td
+    ports:
+      - "8080:8080"
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=production
+      - ADDITIONAL_ENV_VAR=development
+  my-front:
+    image: phrito/front_td3:td
+    ports:
+      - "8080:8080"
+    environment:
+      - WS_BACK_URL=http://my-service:8080
+    volumes:
+      - /home/user/data:/app/data
+

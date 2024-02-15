@@ -2,10 +2,13 @@ FROM nginx:latest
 
 WORKDIR /usr/share/nginx/html
 
-COPY . .
+COPY entrypoint.sh /
 
-RUN chmod +x entrypoint.sh
+COPY index.html .
 
-ENTRYPOINT ["./entrypoint.sh"]
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["nginx", "-g", "daemon off;"]
+

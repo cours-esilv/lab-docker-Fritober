@@ -1,0 +1,3 @@
+docker stop contain frontcontainer
+docker rm contain frontcontainer
+docker rmi phrito/johan_liu_td3 phrito/front_td3
